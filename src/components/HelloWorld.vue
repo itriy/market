@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 @click="addEventToBus">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -36,6 +36,23 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    addEventToBus(){
+     
+      this.$bus.$emit("sidebar.open")
+    },
+  },
+  created(){
+    this.$bus.$on("console.test", ()=> {
+       console.log('console.test')
+    });
+  },
+  beforeDestroy(){
+    // console.log('OFF,console.test')
+        this.$bus.$off("console.test",()=> {
+       console.log('OFF,console.test')
+    });
   }
 }
 </script>
@@ -56,4 +73,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>

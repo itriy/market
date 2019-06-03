@@ -13,6 +13,15 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  created(){
+       this.$bus.$on("console.test", ()=> {
+       console.log('console from Home')
+    });
+  },
+    beforeDestroy(){
+    // console.log('OFF,console.test')
+        this.$bus.$off("console.test");
   }
 }
 </script>
