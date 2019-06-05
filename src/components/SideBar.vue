@@ -1,6 +1,7 @@
 <template>
   <div class="sidebar" :class="{open}">
     <h2>SideBar</h2>
+    <button @click="closeSideBar">X</button>
   </div>
 </template>
 <script>
