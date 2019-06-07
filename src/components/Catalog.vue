@@ -1,7 +1,7 @@
 <template>
   <div class="catalog">
     <div class="catalog__list">
-      <item v-for="(item,index) in 17" :key="index" :img="img" class="catalog__list-item"></item>
+      <item v-for="(item,index) in 17" :key="index" :img="img" :index="index" class="catalog__list-item"></item>
     </div>
   </div>
 </template>

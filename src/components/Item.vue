@@ -1,11 +1,14 @@
 <template>
     <div class="item">
-        <img :src="img" alt="">
+        <router-link :to="{name: 'ItemView',params:{slug:index}}">
+            <img :src="img" alt="">
+        </router-link>
+
     </div>
 </template>
 <script>
 export default {
-    props: ['img'],
+    props: ['img','index'],
     data(){
         return {
 
@@ -16,6 +19,10 @@ export default {
 <style lang="scss">
     .item {
         display: flex;
+
+        a {
+            width: 100%;
+        }
 
         img {
             width: 100%;

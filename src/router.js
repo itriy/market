@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './views/Main.vue'
+import ItemView from './views/ItemView.vue'
 import Home from './views/Home.vue'
 import Catalog from './components/Catalog.vue'
 
@@ -34,5 +35,10 @@ export default new Router({
         }
       ]
     },
+    {
+      path:'/catalog/:slug',
+      component:ItemView,
+      name: 'ItemView'
+    }
   ]
 })
