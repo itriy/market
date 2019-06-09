@@ -30,7 +30,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/scss/mixins/index.scss";
+@import "../../assets/scss/mixins/index.scss";
 .sidebar {
   height: 100%;
   display: flex;

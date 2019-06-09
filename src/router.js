@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './views/Main.vue'
-import ItemView from './views/ItemView.vue'
-import Home from './views/Home.vue'
-import Catalog from './components/Catalog.vue'
+import ItemView from './views/ItemView'
+import Catalog from './components/Catalog/'
 
 Vue.use(Router)
 
@@ -17,8 +16,8 @@ export default new Router({
       children: [
         {
           path: '/',
-          name: 'Home',
-          component: Home,
+          name: 'Catalog',
+          component: Catalog,
         },
         {
           path: '/catalog',

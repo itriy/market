@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import Item from "./Item";
+import Item from "../Item";
 export default {
   components: {
     Item
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/scss/mixins/index.scss";
+@import "../../assets/scss/mixins/index.scss";
 
 $padding: 10px;
 

@@ -1,27 +1,22 @@
 <template>
-<div>
-    <div class="nav">
-        <router-link to="/">Home</router-link>|
-        <router-link to="/about">About</router-link>|
-        <router-link to="/catalog">Catalog</router-link>
-      </div>
-      <router-view/>
-      <sidebar></sidebar>
-</div>
-
+  <div>
+    <top-menu class="nav"></top-menu>
+    <router-view/>
+    <sidebar></sidebar>
+  </div>
 </template>
 <script>
-import Sidebar from "../components/SideBar"
+import Sidebar from "../components/Sidebar";
+import TopMenu from "../components/Menu";
 export default {
-    components: {
-      Sidebar
-    },
-    data() {
-      return {
-        
-      }
-    }
-}
+  components: {
+    Sidebar,
+    TopMenu
+  },
+  data() {
+    return {};
+  }
+};
 </script>
 <style lang="scss">
 .nav {
