@@ -16,17 +16,4 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-    .item {
-        display: flex;
-
-        a {
-            width: 100%;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-</style>
+<style lang="scss" src="./style.scss"></style>
