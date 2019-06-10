@@ -3,11 +3,16 @@
     <button @click="closeItemView">Back</button>
     ItemView
       <router-view/>
+      <sidebar></sidebar>
 </div>
 
 </template>
 <script>
+import Sidebar from "../../components/Sidebar";
 export default {
+    components: {
+        Sidebar
+    },
     data() {
       return {
 
