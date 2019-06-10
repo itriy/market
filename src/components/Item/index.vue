@@ -1,17 +1,24 @@
 <template>
-    <div class="item">
-        <router-link :to="{name: 'ItemView',params:{slug:index}}">
-            <img :src="img" alt="">
-        </router-link>
+    <div class="item" @click="toFullView">
+            <div class="item__img">
+                <img :src="itemData.image" alt="">
+            </div>
+            <div class="item__title">{{itemData.title}}</div>
+            <div class="item__descriptions">{{itemData.descriptions}}</div>
 
     </div>
 </template>
 <script>
 export default {
-    props: ['img','index'],
+    props: [ 'itemData'],
     data(){
         return {
 
+        }
+    },
+    methods: {
+        toFullView(){
+            this.$router.push({name: 'ItemView',params:{slug:this.itemData.slug}});
         }
     }
 }

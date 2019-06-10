@@ -1,12 +1,29 @@
+
+@import "../../assets/scss/mixins/index.scss";
+
 .item {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 1px solid #47b784;
+    cursor: pointer;
 
-    a {
-        width: 100%;
+    &__img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+
     }
-
-    img {
-        width: 100%;
-        height: auto;
+    &__title {
+        font-size: 20px;
+        padding: 0 5px;
+        font-weight: bold;
+    }
+    &__descriptions {
+        font-size: 16px;
+        padding: 0 5px;
+        text-align: justify;
     }
 }
