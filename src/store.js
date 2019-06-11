@@ -57,6 +57,13 @@ export default new Vuex.Store({
   getters: {
     GET_ITEMS: (state) => {
       return state.items
+    },
+    GET_ITEM_BY_SLUG: (state) => {
+      return (slug)=>{
+        return state.items.find((el)=>{
+          return el.slug === slug;
+        })
+      }
     }
   }
 })

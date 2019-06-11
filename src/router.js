@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import MainView from './views/MainView'
-import ItemView from './views/ItemView'
+import ItemView from './components/ItemView'
 import Catalog from './components/Catalog/'
 
 Vue.use(Router)
@@ -25,19 +25,17 @@ export default new Router({
           component: Catalog,
         },
         {
+          path:'/catalog/:slug',
+          component:ItemView,
+          name: 'ItemView',
+          props: true
+        },
+        {
           path: '/about',
           name: 'about',
-          // route level code-splitting
-          // this generates a separate chunk (about.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
-          component: () => import(/* webpackChunkName: "about" */ './components/About')
+          component: () => import('./components/About')
         }
       ]
-    },
-    {
-      path:'/catalog/:slug',
-      component:ItemView,
-      name: 'ItemView'
     }
   ]
 })
